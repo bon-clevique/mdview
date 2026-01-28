@@ -2,6 +2,11 @@
 
 Markdown + Mermaid viewer for the terminal. Displays Markdown files with inline Mermaid diagrams converted to images.
 
+## Screenshots
+
+![mdview sample output 1](screenshot1.png)
+![mdview sample output 2](screenshot2.png)
+
 ## Features
 
 - Renders Markdown in the terminal using `mdcat`
