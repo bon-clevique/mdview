@@ -96,6 +96,8 @@ process_markdown() {
 
       if [[ "$code_language" == "mermaid" ]]; then
         # Mermaidブロック開始
+        printf '%s' "$line_buffer"
+        line_buffer=""
         in_code_block=true
         code_content=""
         continue
