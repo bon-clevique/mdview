@@ -4,8 +4,8 @@ Markdown + Mermaid viewer for the terminal. Displays Markdown files with inline 
 
 ## Screenshots
 
-![mdview sample output 1](screenshot1.png)
-![mdview sample output 2](screenshot2.png)
+![mdview sample output 1](https://raw.githubusercontent.com/bon-clevique/mdview/f62527a/screenshot1.png)
+![mdview sample output 2](https://raw.githubusercontent.com/bon-clevique/mdview/f62527a/screenshot2.png)
 
 ## Features
 
