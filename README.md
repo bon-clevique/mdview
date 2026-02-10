@@ -48,7 +48,7 @@ ln -s "$(pwd)/mdview" /usr/local/bin/mdview
 cp mdview /usr/local/bin/
 ```
 
-> **Note:** `/usr/local/bin` にパーミッションエラーが出る場合は `sudo` を付けるか、`~/.local/bin` など自分のPATH配下にコピーしてください。
+> **Note:** If you get a permission error for `/usr/local/bin`, use `sudo` or copy to a directory in your PATH like `~/.local/bin`.
 
 ## Usage
 
