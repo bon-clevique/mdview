@@ -66,12 +66,16 @@ process_markdown() {
           echo "$code_content" > "$mermaid_file"
 
           # PNG画像に変換（透明背景）
-          if mmdc -i "$mermaid_file" -o "$png_file" -b transparent -t dark &>/dev/null; then
+          local mmdc_output
+          if mmdc_output=$(mmdc -i "$mermaid_file" -o "$png_file" -b transparent -t dark 2>&1); then
             # Mermaid画像参照を追加
             echo "![Mermaid Diagram ${DIAGRAM_COUNTER}](${png_file})"
             echo ""
           else
             # 変換失敗時は元のコードブロックを出力
+            echo "Warning: Mermaid diagram ${DIAGRAM_COUNTER} conversion failed" >&2
+            echo "$mmdc_output" >&2
+            echo '```mermaid'
             echo -n "$code_content"
             echo '```'
             echo ""
