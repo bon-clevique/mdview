@@ -27,20 +27,28 @@ brew install mdcat
 npm install -g @mermaid-js/mermaid-cli
 ```
 
-### Install mdview
+### Quick Install (curl)
 
 ```bash
-# Clone and add to PATH
-git clone https://github.com/bon/mdview.git
-chmod +x mdview/mdview
-ln -s "$(pwd)/mdview/mdview" /usr/local/bin/mdview
+curl -fsSL https://raw.githubusercontent.com/bon-clevique/mdview/main/mdview -o /usr/local/bin/mdview && chmod +x /usr/local/bin/mdview
 ```
 
-Or simply copy the script to a directory in your `$PATH`:
+### Install from Source
 
 ```bash
+git clone https://github.com/bon-clevique/mdview.git
+cd mdview
+chmod +x mdview
+
+# Choose one:
+# Option A: Symlink (updates when you git pull)
+ln -s "$(pwd)/mdview" /usr/local/bin/mdview
+
+# Option B: Copy
 cp mdview /usr/local/bin/
 ```
+
+> **Note:** `/usr/local/bin` にパーミッションエラーが出る場合は `sudo` を付けるか、`~/.local/bin` など自分のPATH配下にコピーしてください。
 
 ## Usage
 
