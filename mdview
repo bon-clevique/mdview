@@ -54,7 +54,7 @@ process_markdown() {
   while IFS= read -r line || [[ -n "$line" ]]; do
     # コードブロック内の処理
     if $in_code_block; then
-      if [[ "$line" =~ ^\`\`\`$ ]]; then
+      if [[ "$line" =~ ^\`\`\`[[:space:]]*$ ]]; then
         # コードブロック終了
         if [[ "$code_language" == "mermaid" ]]; then
           # Mermaid画像に変換
